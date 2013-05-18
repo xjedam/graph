@@ -167,7 +167,7 @@ db_connector.open(function(err, db){
 
 Po kilkunastu minutach podczas których procesor próbował naśladować serce tworząc wykres trochę podobny do wykresu ECG serca podczas częstoskurczu komorowego ;)...
 ![Prawie wykres ECG](/images/cpu.png)
-![Częstoskurcz](/images/częstoskurcz.jpg)
+![Częstoskurcz](/images/czestoskurcz.jpg)
 ...węzły grafu zostały zaimportowane i panel webadmin radośnie oznajmił, że baza zawiera 51179 węzłów (ale już wyświetlał je bez większego entuzjazmu).
 
 Oczywiście teraz należało dodać relacje pomiędzy tymi węzłami. Api neo4j dla nodejs nie posiada metod tworzenia relacji więc utworzymy je za pomocą zapytania Cypher. Dodatkowo pobrane dane z mongo posortujemy wzgledem ostatniej liczby d, aby uniknac deadlocków, gdyż wartości a, b, c przylegających wpisów się powtarzały, co niestety blokowało cały program.
@@ -218,3 +218,5 @@ Nastepnie można już przeglądać dane! Niestety rysowanie grafu zapytaniami Cy
 ![Stats](/images/1.png)
 Następnie klikając na węzły będące z nim w relacji można dalej rozwijać graf:
 ![Stats](/images/2.png)
+Gdy tworzą się nam agregacje elementów można je rozwinąc klikając na nie i wybierając "Select all"
+![Stats](/images/3.png)
