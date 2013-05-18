@@ -223,3 +223,28 @@ Następnie klikając na węzły będące z nim w relacji można dalej rozwijać 
 
 Gdy tworzą się nam agregacje elementów można je rozwinąc klikając na nie i wybierając "Select all"
 ![Stats](/images/3.png)
+
+## Uruchamianie
+Aby uruchomić program szukający w C należy oczywiście posiadać gcc oraz [sterowniki mongodb dla C](https://github.com/mongodb/mongo-c-driver/blob/master/README.md).
+Należy również zmodyfikować search_fulls.c ustawiając zakres, liczbę wątków w zależności od ilości posiadanych rdzeni oraz szczegóły połączenia z bazą danych mongo
+
+Kompilacja i uruchamianie:
+```
+gcc -Isrc --std=gnu99 /sciezka/do/mongo-c-driver/src/*.c -I /sciezka/do/mongo-c-driver/src/search_fulls.c -lm -o search
+./search_fulls
+```
+
+Po uruchomieniu należy zostawić komputer na pewien czas, w zależności od tego ile wyników ma on znaleźć.
+
+Gdy mamy potrzebne wyniki, należy zainstalować [nodejs](http://nodejs.org/), [npm](https://npmjs.org/), a następnie w folderze projektu pobrać sterowniki do [mongodb](https://github.com/mongodb/node-mongodb-native) i [Neo4j](https://github.com/thingdom/node-neo4j):
+```
+npm install mongodb
+npm install neo4j
+```
+Następnie kolejno stworzyć węzły i relacje(troszkę to potrwa zależnie od ilości danych):
+```
+node create_nodes.js
+```
+```
+node create_rels.js
+```
