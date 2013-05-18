@@ -241,7 +241,7 @@ Gdy mamy potrzebne wyniki, należy zainstalować [nodejs](http://nodejs.org/), [
 npm install mongodb
 npm install neo4j
 ```
-Następnie kolejno stworzyć węzły i relacje(troszkę to potrwa zależnie od ilości danych):
+Następnie zedytować szczegóły połączeń z bazami danych(najlepiej bazy lokalne) i kolejno stworzyć węzły i relacje(troszkę to potrwa zależnie od ilości danych):
 ```
 node create_nodes.js
 ```
