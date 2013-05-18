@@ -3,7 +3,7 @@
 ## Problem
 
 Istnieje pewien dotąd nie rozwiązany problem, którym zajmują się pewne osoby na Uniwersytecie Gdańskim:
-Określmy graf w którym węzłami są liczby naturalne, węzły łączymy, gdy suma ich wartości jest kwadratem jakiejś liczby. Jaką najmniejszą liczbą da się taki graf pokolorować? Czy będzie to jakaś skończona liczba? Czy może połączeń wraz ze zwiększaniem zakresu poszukiwań zawsze będzie dochodziło i wymagana będzie niekończona ilość kolorów?
+Określmy graf w którym węzłami są liczby naturalne, węzły łączymy, gdy suma ich wartości jest kwadratem jakiejś liczby. Jaką najmniejszą liczbą kolorów da się pokolorować wierzchołki tego grafu, aby krawędź nie łączyła dwóch wierzchołków tego samego koloru? Czy będzie to jakaś skończona liczba? Czy może połączeń wraz ze zwiększaniem zakresu poszukiwań zawsze będzie dochodziło i wymagana będzie niekończona ilość kolorów?
 
 W ujęciu algorytmicznym można podejść do tego w następujący sposób:
 Szukamy największych podgrafów pełnych - tzn par, trójek, czwórek, itd... liczb które wszystkie są ze sobą w relacji. W takim podgrafie trzeba będzie zużyć tyle kolorów ile wynosi stopień tego podgrafu.
