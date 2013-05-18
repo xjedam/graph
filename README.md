@@ -230,7 +230,7 @@ Należy również zmodyfikować search_fulls.c ustawiając zakres, liczbę wątk
 
 Kompilacja i uruchamianie:
 ```
-gcc -Isrc --std=gnu99 /sciezka/do/mongo-c-driver/src/*.c -I /sciezka/do/mongo-c-driver/src/search_fulls.c -lm -o search
+gcc -Isrc --std=gnu99 /sciezka/do/mongo-c-driver/src/*.c -I /sciezka/do/mongo-c-driver/src/ search_fulls.c -lm -o search
 ./search
 ```
 
