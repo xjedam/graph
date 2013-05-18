@@ -127,8 +127,8 @@ Wyniki zostały zapisane w postaci:
 > db.squares.find().count()
 25893
 ```
-Brak podgrafów pełnych stopnia 5 rodził pytania, czy przypadkiem nie wystarczą 4 kolory abo pokolorować ten graf...
-Oczywiście nie tylko pełne podgrafy stopnia 5 mogłyby wymusić więcej niż 4 kolory, ale w takim wypadku trzebaby analizować otrzymany graf na inne sposoby. Oczywiście można odpytywać bazę danych sprytnymi agregacjami, lecz postanowiłem spróbować ułatwić pracę prezentując otrzymane dane jao... graf.
+Brak podgrafów pełnych stopnia 5 rodził pytania, czy przypadkiem nie wystarczą 4 kolory aby pokolorować ten graf...
+Oczywiście nie tylko pełne podgrafy stopnia 5 mogłyby wymusić więcej niż 4 kolory, ale w takim wypadku trzebaby analizować otrzymany graf na inne sposoby. Oczywiście można odpytywać bazę danych sprytnymi agregacjami, lecz postanowiłem spróbować ułatwić pracę prezentując otrzymane dane jako... graf.
 
 ## Przenoszenie danych
 
@@ -165,13 +165,13 @@ db_connector.open(function(err, db){
 ```
 [Pełny kod](/create_nodes.js)
 
-Po kilkunastu minutach podczas których procesor próbował naśladować serce tworząc wykres trochę podobny do wykresu ECG serca podczas częstoskurczu komorowego ;)...
+Po kilkudziesięciu minutach podczas których procesor próbował naśladować serce tworząc wykres trochę podobny do wykresu ECG podczas częstoskurczu komorowego ;)...
 ![Prawie wykres ECG](/images/cpu.png)
 ![Częstoskurcz](/images/czestoskurcz.jpg)
 
-...węzły grafu zostały zaimportowane i panel webadmin radośnie oznajmił, że baza zawiera 51179 węzłów (ale już wyświetlał je bez większego entuzjazmu).
+...węzły grafu zostały zaimportowane i panel webadmin radośnie oznajmił, że baza zawiera 51179 węzłów (ale już wyświetlał je wszystkie bez większego entuzjazmu z uwagi na ich ilość).
 
-Oczywiście teraz należało dodać relacje pomiędzy tymi węzłami. Api neo4j dla nodejs nie posiada metod tworzenia relacji więc utworzymy je za pomocą zapytania Cypher. Dodatkowo pobrane dane z mongo posortujemy wzgledem ostatniej liczby d, aby uniknac deadlocków, gdyż wartości a, b, c przylegających wpisów się powtarzały, co niestety blokowało cały program.
+Oczywiście teraz należało dodać relacje pomiędzy tymi węzłami. API neo4j dla nodejs nie posiada metod tworzenia relacji więc utworzymy je za pomocą zapytania Cypher. Dodatkowo pobrane dane z mongo posortujemy wzgledem ostatniej liczby d, aby uniknac deadlocków, gdyż wartości a, b, c przylegających wpisów się powtarzały, co niestety blokowało cały program.
 ```javascript
 db_connector.open(function(err, db){
     if (err) {
